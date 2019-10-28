@@ -1,8 +1,8 @@
 {
   "name": "signagelive-widget-base",
-  "cleanname": "Adbay Signage Live Widget Base",
+  "cleanname": "Adbay Social Posts",
   "version": "1.0.0",
-  "description": "Adbay Base Widget for Signage Live",
+  "description": "Adbay Social Posts Widget for Signage Live",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
