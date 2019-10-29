@@ -19,5 +19,5 @@ $(function() {
 });
 
 function get_random(myList) {
-  return Math.floor(Math.random() * 72);
+  return Math.floor(Math.random() * myList.length);
 }
