@@ -5,11 +5,12 @@ $(function() {
     //$("#output").text(config.preferences["Article Number"]);
     //load the page
     $.get(config.preferences["Feed"], "", function(data, textStatus, jqXHR) {
-      console.log(data);
-      var randomIndex = get_random(data);
-      $("#photo").attr("src", data[randomIndex][3]);
-      $("#title").text(data[randomIndex][2]);
-      $("#message").text(data[randomIndex][4]);
+      if (data[0][3] == "") {
+        data[0][3] = "media/default.png";
+      }
+      $("#photo").attr("src", data[0][3]);
+      $("#title").text(data[0][2]);
+      $("#message").text(data[0][4]);
     });
   });
   config.on("config-error", function() {
@@ -17,7 +18,3 @@ $(function() {
   });
   config.init();
 });
-
-function get_random(myList) {
-  return Math.floor(Math.random() * myList.length);
-}
